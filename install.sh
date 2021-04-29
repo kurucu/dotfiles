@@ -28,9 +28,6 @@ pecl install imagick memcached redis swoole
 # Install global Composer packages
 /usr/local/bin/composer global require laravel/installer laravel/valet beyondcode/expose
 
-# Install Laravel Valet
-$HOME/.composer/vendor/bin/valet install
-
 # Create a Developer directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
 mkdir $HOME/Developer
@@ -41,6 +38,10 @@ mkdir $HOME/Developer/Nova
 
 # Clone Github repositories
 ./clone.sh
+
+# Install Laravel Valet
+$HOME/.composer/vendor/bin/valet install
+$HOME/.composer/vendor/bin/valet park $HOME/Sites
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
