@@ -4,9 +4,11 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'nicoverbruggen/homebrew-cask'
+tap "homebrew/core"
+tap "homebrew/services"
 
 # Binaries
-brew 'awscli'
+#brew 'awscli'
 brew 'bash' # Latest Bash version
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'ffmpeg'
@@ -14,94 +16,120 @@ brew 'gh'
 brew 'git'
 brew 'gnupg'
 brew 'grep'
-brew 'httpie'
-brew 'hub'
+#brew 'httpie'
+#brew 'hub'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
-brew 'stripe/stripe-cli/stripe'
-brew 'svn'
+#brew 'stripe/stripe-cli/stripe'
+#brew 'svn'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
-brew 'zlib' # Needed for Memcached
+#brew 'zlib' # Needed for Memcached
 
 # Spatie Medialibrary
-brew 'jpegoptim'
-brew 'optipng'
-brew 'pngquant'
-brew 'svgo'
-brew 'gifsicle'
+#brew 'jpegoptim'
+#brew 'optipng'
+#brew 'pngquant'
+#brew 'svgo'
+#brew 'gifsicle'
 
 # Development
-brew 'php'
-brew 'php@7.4'
-brew 'php@7.3'
-brew 'composer'
-brew 'imagemagick'
-brew 'libmemcached'
-brew 'meilisearch'
-brew 'memcached'
-brew 'mysql'
-brew 'nginx'
+brew "composer"
+brew "curl"
+brew "dnsmasq", restart_service: true
+brew "node"
+brew "firebase-cli"
+brew "gh"
+brew "pcre"
+brew "sqlite"
+brew "imagemagick"
+brew "logrotate", restart_service: true
+brew "mailhog", restart_service: true
+brew "mas"
+brew "nano"
+brew "nginx", restart_service: true
 brew 'node'
-brew 'redis'
-brew 'yarn'
+brew "php", restart_service: true
+brew "php-cs-fixer"
+brew "postgresql@12", restart_service: true
+brew "redis", restart_service: true
+brew "s3cmd"
+brew "starship"
+brew "wget"
+brew "yarn"
+
 
 # Apps
-cask '1password'
-cask '1password-cli'
-cask 'aerial'
-cask 'alfred'
-cask 'caffeine'
+cask "cakebrew"
+#cask '1password'
+#cask '1password-cli'
+#cask 'aerial'
+#cask 'alfred'
+#cask 'caffeine'
 cask 'dbngin'
-cask 'discord'
-cask 'docker'
-cask 'figma'
-cask 'firefox'
+#cask 'discord'
+#cask 'docker'
+#cask 'figma'
+#cask 'firefox'
 cask 'github'
-cask 'google-backup-and-sync'
-cask 'google-chrome'
-cask 'gpg-suite'
-cask 'imageoptim'
+#cask 'google-backup-and-sync'
+#cask 'google-chrome'
+#cask 'gpg-suite'
+#cask 'imageoptim'
 cask 'insomnia'
-cask 'phpmon'
-cask 'phpstorm'
+#cask 'phpmon'
+#cask 'phpstorm'
 cask 'ray'
-cask 'screenflow'
+#cask 'screenflow'
 cask 'signal'
-cask 'slack'
-cask 'sublime-text'
+#cask 'slack'
+#cask 'sublime-text'
 cask 'tableplus'
-cask 'telegram-desktop'
-cask 'the-unarchiver'
 cask 'tinkerwell'
-cask 'transmission'
+#cask 'transmission'
 cask 'transmit'
-cask 'tunnelbear'
-cask 'tuple'
+#cask 'tunnelbear'
+#cask 'tuple'
 cask 'visual-studio-code'
-cask 'vlc'
-cask 'zoom'
+#cask 'vlc'
+#cask 'zoom'
 
 # Quicklook
 cask 'qlmarkdown'
 cask 'quicklook-json'
 
 # Fonts
-cask 'font-lato'
-cask 'font-open-sans'
-cask 'font-roboto'
-cask 'font-source-code-pro-for-powerline'
-cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
+#cask 'font-lato'
+#cask 'font-open-sans'
+#cask 'font-roboto'
+#cask 'font-source-code-pro'
+#cask 'font-source-code-pro-for-powerline'
+#cask 'font-source-sans-pro'
+#cask 'font-source-serif-pro'
+cask "font-fira-code"
+
 
 # Mac App Store
-mas 'Byword', id: 420212497
-mas 'Giphy Capture', id: 668208984
-mas 'Keynote', id: 409183694
-mas 'Numbers', id: 409203825
-mas 'Spark', id: 1176895641
+mas "Acorn", id: 1547371478
+mas "Bear", id: 1091189122
+mas "Brother ScannerApp", id: 912659472
+mas "DaisyDisk", id: 411643860
+mas "Developer", id: 640199958
+mas "Duplicate Photos Fixer Pro", id: 963642514
+mas "Keynote", id: 409183694
+mas "Mastonaut", id: 1450757574
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "NordVPN IKE", id: 1116599239
+mas "Numbers", id: 409203825
+mas "OTP Auth", id: 1471867429
+mas "Pages", id: 409201541
+mas "Panorama Stitcher", id: 979573567
+mas "PiPifier", id: 1160374471
 mas 'Speedtest', id: 1153157709
-mas 'Things', id: 904280696
-mas 'Tweetbot', id: 1384080005
+mas "Telegram", id: 747648890
+mas "The Unarchiver", id: 425424353
+mas "Twitter", id: 1482454543
+mas "WhatsApp", id: 1147396723
+mas "Wipr", id: 1320666476
+mas "Xcode", id: 497799835
