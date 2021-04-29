@@ -8,7 +8,13 @@ export DOTFILES=$HOME/.dotfiles
 export ZSH=$HOME/.oh-my-zsh
 
 # Enable completions
-autoload -Uz compinit && compinit
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  autoload -Uz compinit
+  compinit
+else
+  autoload -Uz compinit && compinit
+fi
 
 # Minimal - Theme Settings
 export MNML_INSERT_CHAR="$"
@@ -97,6 +103,9 @@ export LANG=en_US.UTF-8
 # else
 #   export EDITOR='mvim'
 # fi
+# Preferred Editor
+export EDITOR='nano'
+export VISUAL='nano'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
