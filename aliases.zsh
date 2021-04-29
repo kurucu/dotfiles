@@ -11,39 +11,39 @@ alias c="clear"
 alias dotfiles="cd $DOTFILES"
 alias library="cd $HOME/Library"
 alias sites="cd $HOME/Sites"
-alias lara="sites && cd laravel/"
-alias docs="lara && cd docs/"
+alias dev="cd $HOME/Developer"
+alias cdp="sites && cd pianta-app/"
 
 # Laravel
-alias a="php artisan"
+alias art="php artisan"
 alias fresh="php artisan migrate:fresh --seed"
 alias seed="php artisan db:seed"
 
 # PHP
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
-alias php74="docker run -it -w /data -v ${PWD}:/data:delegated --entrypoint php --rm registry.gitlab.com/grahamcampbell/php:7.4"
-alias php8="docker run -it -w /data -v ${PWD}:/data:delegated --entrypoint php --rm registry.gitlab.com/grahamcampbell/php:8.0"
-alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
+# alias php8="docker run -it -w /data -v ${PWD}:/data:delegated --entrypoint php --rm registry.gitlab.com/grahamcampbell/php:8.0"
+# alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 alias watch="npm run watch"
 
 # Vagrant
-alias v="vagrant global-status"
-alias vup="vagrant up"
-alias vhalt="vagrant halt"
-alias vssh="vagrant ssh"
-alias vreload="vagrant reload"
-alias vrebuild="vagrant destroy --force && vagrant up"
+# alias v="vagrant global-status"
+# alias vup="vagrant up"
+# alias vhalt="vagrant halt"
+# alias vssh="vagrant ssh"
+# alias vreload="vagrant reload"
+# alias vrebuild="vagrant destroy --force && vagrant up"
 
 # Docker
-alias docker-composer="docker-compose"
+# alias docker-composer="docker-compose"
 
 # Git
 alias gst="git status"
 alias gb="git branch"
 alias gc="git checkout"
+alias gs="git status"
 alias gl="git log --oneline --decorate --color"
 alias amend="git add . && git commit --amend --no-edit"
 alias commit="git add . && git commit -m"
